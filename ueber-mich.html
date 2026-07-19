@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Über mich — SYS-HOMELAB</title>
+<link rel="stylesheet" href="assets/css/sys-homelab.css">
+</head>
+<body>
+
+<header class="topnav">
+  <a href="index.html" class="brand">
+    <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2L36 11V29L20 38L4 29V11L20 2Z" stroke="#8dff00" stroke-width="2"/>
+      <path d="M14 15c0-2 2-3 5-3s5 1.4 5 3.2c0 4.6-11 2.4-11 8.4 0 2.3 2.3 4.2 6 4.2s6-1.6 6-4" stroke="#8dff00" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span class="brand-text">SYS-HOMELAB<small>LEARN. BUILD. DOCUMENT.</small></span>
+  </a>
+  <nav class="navlinks" id="navlinks">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="system.html">System</a>
+    <a href="netzwerk.html">Netzwerk</a>
+    <a href="dienste.html">Dienste</a>
+    <a href="storage.html">Storage</a>
+    <a href="streaming.html">Streaming</a>
+    <a href="logs.html">Logs</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle active" type="button">Mehr ▾</button>
+      <div class="dropdown-menu">
+        <a href="projekt.html">Projekt</a>
+        <a href="dokumentation.html">Dokumentation</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="blog.html">Blog</a>
+        <a href="ueber-mich.html" class="active">Über mich</a>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-right">
+    <div class="nav-clock"><b id="clockTime">--:--:--</b><span id="clockDate">--.--.----</span></div>
+  </div>
+  <button class="nav-burger" id="navBurger" aria-label="Menü">☰</button>
+</header>
+
+<div class="page-hero">
+  <div class="crumb">ÜBER MICH</div>
+  <h1>Denis</h1>
+  <p>Angehender Fachinformatiker für Systemintegration — SYS-HOMELAB ist mein Lernplattform- und Portfolio-Projekt.</p>
+</div>
+
+<div class="content">
+  <div class="two-col">
+    <div class="card">
+      <svg width="56" height="56" viewBox="0 0 40 40" fill="none" style="margin-bottom:14px;">
+        <path d="M20 2L36 11V29L20 38L4 29V11L20 2Z" stroke="#8dff00" stroke-width="2"/>
+        <path d="M14 15c0-2 2-3 5-3s5 1.4 5 3.2c0 4.6-11 2.4-11 8.4 0 2.3 2.3 4.2 6 4.2s6-1.6 6-4" stroke="#8dff00" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <p class="desc">Fokus: Linux-Administration, Netzwerktechnik, Virtualisierung, IT-Security.<br><br>SYS-HOMELAB dient als praktische Lernumgebung während der Umschulung — jede Phase wird dokumentiert, jeder Fehler auch.</p>
+    </div>
+    <div class="card">
+      <div class="row-list">
+        <div class="row"><span>Rolle</span><span class="row-meta">Fachinformatiker Systemintegration i.A.</span></div>
+        <div class="row"><span>Portfolio</span><span class="row-meta">sys-portfolio.de</span></div>
+        <div class="row"><span>GitHub</span><span class="row-meta">github.com/SYS-PORTFOLIO</span></div>
+        <div class="row"><span>Stream</span><span class="row-meta">/sys_homelab</span></div>
+        <div class="row"><span>Aktuelles Projekt</span><span class="row-meta">SYS-HOMELAB · Phase 1/8</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">// Warum dieses Projekt</div>
+  <p class="desc">Statt nur einen Ubuntu-Server zu installieren, soll SYS-HOMELAB eine vollständige, dokumentierte Infrastruktur werden: Linux, Netzwerktechnik, Docker, Virtualisierung, Monitoring, Backup, Webentwicklung und IT-Security — alles sauber nachvollziehbar, mit echten Terminal-Screenshots statt Handyfotos.</p>
+
+  <p style="margin-top:16px;"><a href="projekt.html" class="card-link">→ zum SYS-Ökosystem</a></p>
+</div>
+
+<footer class="sitefooter">
+  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Kernel 7.0.0-22-generic · Phase 1/8 abgeschlossen</div>
+  <div class="fstatus">
+    <span><span class="fdot on"></span>SSH aktiv</span>
+    <span><span class="fdot"></span>Docker geplant</span>
+    <span><span class="fdot"></span>Backup geplant</span>
+    <span><span class="fdot"></span>Monitoring geplant</span>
+  </div>
+</footer>
+
+<script src="assets/js/sys-homelab.js"></script>
+</body>
+</html>

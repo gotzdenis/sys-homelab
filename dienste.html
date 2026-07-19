@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dienste — SYS-HOMELAB</title>
+<link rel="stylesheet" href="assets/css/sys-homelab.css">
+</head>
+<body>
+
+<header class="topnav">
+  <a href="index.html" class="brand">
+    <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2L36 11V29L20 38L4 29V11L20 2Z" stroke="#8dff00" stroke-width="2"/>
+      <path d="M14 15c0-2 2-3 5-3s5 1.4 5 3.2c0 4.6-11 2.4-11 8.4 0 2.3 2.3 4.2 6 4.2s6-1.6 6-4" stroke="#8dff00" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span class="brand-text">SYS-HOMELAB<small>LEARN. BUILD. DOCUMENT.</small></span>
+  </a>
+  <nav class="navlinks" id="navlinks">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="system.html">System</a>
+    <a href="netzwerk.html">Netzwerk</a>
+    <a href="dienste.html" class="active">Dienste</a>
+    <a href="storage.html">Storage</a>
+    <a href="streaming.html">Streaming</a>
+    <a href="logs.html">Logs</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle" type="button">Mehr ▾</button>
+      <div class="dropdown-menu">
+        <a href="projekt.html">Projekt</a>
+        <a href="dokumentation.html">Dokumentation</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="blog.html">Blog</a>
+        <a href="ueber-mich.html">Über mich</a>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-right">
+    <div class="nav-clock"><b id="clockTime">--:--:--</b><span id="clockDate">--.--.----</span></div>
+  </div>
+  <button class="nav-burger" id="navBurger" aria-label="Menü">☰</button>
+</header>
+
+<div class="page-hero">
+  <div class="crumb">DIENSTE</div>
+  <h1>Systemdienste &amp; Docker-Container</h1>
+  <p>Zwei Ebenen: Dienste, die direkt auf dem Host laufen (SSH, später Cockpit), und Container, die nach der Docker-Installation in Phase 3 dazukommen.</p>
+</div>
+
+<div class="content">
+
+  <div class="section-title">// Host-Dienste</div>
+  <div class="card">
+    <table>
+      <tr><th>Dienst</th><th>Port</th><th>Beschreibung</th><th>Status</th></tr>
+      <tr><td>SSH</td><td><code>22</code></td><td>Secure Shell — Fernzugriff</td><td><span class="status-pill status-online"><span class="sd"></span>aktiv</span></td></tr>
+      <tr><td>Cockpit</td><td><code>9090</code></td><td>Webbasierte Serververwaltung</td><td><span class="status-pill status-planned"><span class="sd"></span>geplant</span></td></tr>
+    </table>
+  </div>
+
+  <div class="section-title">// Docker-Container (geplant ab Phase 3)</div>
+  <div class="grid grid-3" id="dockerGrid">
+    <div class="card"><div class="center-flex" style="justify-content:space-between;"><div class="ico" style="width:34px;height:34px;border-radius:8px;background:var(--panel-2);display:flex;align-items:center;justify-content:center;font-size:16px;">📦</div><span class="status-pill status-planned"><span class="sd"></span>geplant</span></div><div style="font-weight:600; margin-top:12px;">Portainer</div><div class="row-sub" style="margin-top:4px;">Docker GUI · Port 9000</div></div>
+    <div class="card"><div class="center-flex" style="justify-content:space-between;"><div class="ico" style="width:34px;height:34px;border-radius:8px;background:var(--panel-2);display:flex;align-items:center;justify-content:center;font-size:16px;">🛡</div><span class="status-pill status-planned"><span class="sd"></span>geplant</span></div><div style="font-weight:600; margin-top:12px;">AdGuard Home</div><div class="row-sub" style="margin-top:4px;">DNS &amp; Werbeblocker · Port 3053</div></div>
+    <div class="card"><div class="center-flex" style="justify-content:space-between;"><div class="ico" style="width:34px;height:34px;border-radius:8px;background:var(--panel-2);display:flex;align-items:center;justify-content:center;font-size:16px;">🎬</div><span class="status-pill status-planned"><span class="sd"></span>geplant</span></div><div style="font-weight:600; margin-top:12px;">Jellyfin</div><div class="row-sub" style="margin-top:4px;">Mediaserver · Port 8096</div></div>
+    <div class="card"><div class="center-flex" style="justify-content:space-between;"><div class="ico" style="width:34px;height:34px;border-radius:8px;background:var(--panel-2);display:flex;align-items:center;justify-content:center;font-size:16px;">📊</div><span class="status-pill status-planned"><span class="sd"></span>geplant</span></div><div style="font-weight:600; margin-top:12px;">Grafana</div><div class="row-sub" style="margin-top:4px;">Monitoring-Dashboards · Port 3000</div></div>
+    <div class="card"><div class="center-flex" style="justify-content:space-between;"><div class="ico" style="width:34px;height:34px;border-radius:8px;background:var(--panel-2);display:flex;align-items:center;justify-content:center;font-size:16px;">📈</div><span class="status-pill status-planned"><span class="sd"></span>geplant</span></div><div style="font-weight:600; margin-top:12px;">Prometheus</div><div class="row-sub" style="margin-top:4px;">Metriken-Sammlung · Port 9091</div></div>
+    <div class="card"><div class="center-flex" style="justify-content:space-between;"><div class="ico" style="width:34px;height:34px;border-radius:8px;background:var(--panel-2);display:flex;align-items:center;justify-content:center;font-size:16px;">☁</div><span class="status-pill status-planned"><span class="sd"></span>geplant</span></div><div style="font-weight:600; margin-top:12px;">Nextcloud</div><div class="row-sub" style="margin-top:4px;">Eigene Cloud · Port 8080</div></div>
+    <div class="card"><div class="center-flex" style="justify-content:space-between;"><div class="ico" style="width:34px;height:34px;border-radius:8px;background:var(--panel-2);display:flex;align-items:center;justify-content:center;font-size:16px;">🔀</div><span class="status-pill status-planned"><span class="sd"></span>geplant</span></div><div style="font-weight:600; margin-top:12px;">Nginx Proxy Manager</div><div class="row-sub" style="margin-top:4px;">Reverse Proxy · Port 81</div></div>
+    <div class="card"><div class="center-flex" style="justify-content:space-between;"><div class="ico" style="width:34px;height:34px;border-radius:8px;background:var(--panel-2);display:flex;align-items:center;justify-content:center;font-size:16px;">🏠</div><span class="status-pill status-planned"><span class="sd"></span>geplant</span></div><div style="font-weight:600; margin-top:12px;">Homepage Dashboard</div><div class="row-sub" style="margin-top:4px;">Startseite aller Dienste · Port 3001</div></div>
+  </div>
+  <p class="hint" style="margin-top:14px;">Docker-Engine selbst ist Teil von Phase 3 der <a href="roadmap.html" class="card-link">Roadmap</a> und noch nicht installiert.</p>
+
+</div>
+
+<footer class="sitefooter">
+  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Kernel 7.0.0-22-generic · Phase 1/8 abgeschlossen</div>
+  <div class="fstatus">
+    <span><span class="fdot on"></span>SSH aktiv</span>
+    <span><span class="fdot"></span>Docker geplant</span>
+    <span><span class="fdot"></span>Backup geplant</span>
+    <span><span class="fdot"></span>Monitoring geplant</span>
+  </div>
+</footer>
+
+<script src="assets/js/sys-homelab.js"></script>
+</body>
+</html>

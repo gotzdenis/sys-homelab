@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dokumentation — SYS-HOMELAB</title>
+<link rel="stylesheet" href="assets/css/sys-homelab.css">
+</head>
+<body>
+
+<header class="topnav">
+  <a href="index.html" class="brand">
+    <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2L36 11V29L20 38L4 29V11L20 2Z" stroke="#8dff00" stroke-width="2"/>
+      <path d="M14 15c0-2 2-3 5-3s5 1.4 5 3.2c0 4.6-11 2.4-11 8.4 0 2.3 2.3 4.2 6 4.2s6-1.6 6-4" stroke="#8dff00" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span class="brand-text">SYS-HOMELAB<small>LEARN. BUILD. DOCUMENT.</small></span>
+  </a>
+  <nav class="navlinks" id="navlinks">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="system.html">System</a>
+    <a href="netzwerk.html">Netzwerk</a>
+    <a href="dienste.html">Dienste</a>
+    <a href="storage.html">Storage</a>
+    <a href="streaming.html">Streaming</a>
+    <a href="logs.html">Logs</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle active" type="button">Mehr ▾</button>
+      <div class="dropdown-menu">
+        <a href="projekt.html">Projekt</a>
+        <a href="dokumentation.html" class="active">Dokumentation</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="blog.html">Blog</a>
+        <a href="ueber-mich.html">Über mich</a>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-right">
+    <div class="nav-clock"><b id="clockTime">--:--:--</b><span id="clockDate">--.--.----</span></div>
+  </div>
+  <button class="nav-burger" id="navBurger" aria-label="Menü">☰</button>
+</header>
+
+<div class="page-hero">
+  <div class="crumb">DOKUMENTATION</div>
+  <h1>Wie SYS-HOMELAB dokumentiert wird</h1>
+  <p>Es sind bereits zahlreiche Screenshots gesammelt worden — diese werden aber nicht als Handyfotos verwendet. Stattdessen entstehen saubere Terminal-Screenshots nach festen Regeln.</p>
+</div>
+
+<div class="content">
+
+  <div class="section-title">// Screenshot-Richtlinien</div>
+  <div class="card">
+    <p class="desc">Für GitHub, Portfolio, Blog und Dokumentation gilt einheitlich:</p>
+    <div class="tag-row">
+      <span class="tag">gleiche Schriftgröße</span>
+      <span class="tag">schwarzer Hintergrund</span>
+      <span class="tag">exakte Befehle</span>
+      <span class="tag">ohne Schreibtisch</span>
+      <span class="tag">ohne Reflexionen</span>
+    </div>
+  </div>
+
+  <div class="section-title">// Verwendungszweck</div>
+  <div class="grid grid-4">
+    <div class="card" style="text-align:center;">GitHub</div>
+    <div class="card" style="text-align:center;">Portfolio</div>
+    <div class="card" style="text-align:center;">Blog</div>
+    <div class="card" style="text-align:center;">Dokumentation</div>
+  </div>
+
+  <div class="section-title">// Corporate Design</div>
+  <div class="grid grid-3">
+    <div class="card"><div style="width:100%; height:38px; border-radius:6px; background:#08090a; border:1px solid var(--border);"></div><div class="hint" style="margin-top:8px;">Schwarz #08090a</div></div>
+    <div class="card"><div style="width:100%; height:38px; border-radius:6px; background:#16181b; border:1px solid var(--border);"></div><div class="hint" style="margin-top:8px;">Anthrazit #16181b</div></div>
+    <div class="card"><div style="width:100%; height:38px; border-radius:6px; background:#8dff00;"></div><div class="hint" style="margin-top:8px;">SYS-Grün #8DFF00</div></div>
+  </div>
+  <p class="desc" style="margin-top:14px;">Schrift: modern, minimalistisch, professionell — JetBrains Mono für Daten/Code, Inter für Fließtext.</p>
+
+  <div class="section-title">// Struktur im Projekt</div>
+  <div class="card">
+    <div class="row-list">
+      <div class="row"><span><code>assets/css/</code></span><span class="row-meta">gemeinsames Stylesheet</span></div>
+      <div class="row"><span><code>assets/js/</code></span><span class="row-meta">gemeinsames Script</span></div>
+      <div class="row"><span><code>projects/documentation/</code></span><span class="row-meta">Setup-Notizen &amp; Configs</span></div>
+      <div class="row"><span><code>projects/scripts/</code></span><span class="row-meta">Bash-Automatisierung</span></div>
+      <div class="row"><span><code>blog-posts/</code></span><span class="row-meta">einzelne Blogartikel</span></div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="sitefooter">
+  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Kernel 7.0.0-22-generic · Phase 1/8 abgeschlossen</div>
+  <div class="fstatus">
+    <span><span class="fdot on"></span>SSH aktiv</span>
+    <span><span class="fdot"></span>Docker geplant</span>
+    <span><span class="fdot"></span>Backup geplant</span>
+    <span><span class="fdot"></span>Monitoring geplant</span>
+  </div>
+</footer>
+
+<script src="assets/js/sys-homelab.js"></script>
+</body>
+</html>

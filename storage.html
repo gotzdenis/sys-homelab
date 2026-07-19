@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storage — SYS-HOMELAB</title>
+<link rel="stylesheet" href="assets/css/sys-homelab.css">
+</head>
+<body>
+
+<header class="topnav">
+  <a href="index.html" class="brand">
+    <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2L36 11V29L20 38L4 29V11L20 2Z" stroke="#8dff00" stroke-width="2"/>
+      <path d="M14 15c0-2 2-3 5-3s5 1.4 5 3.2c0 4.6-11 2.4-11 8.4 0 2.3 2.3 4.2 6 4.2s6-1.6 6-4" stroke="#8dff00" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span class="brand-text">SYS-HOMELAB<small>LEARN. BUILD. DOCUMENT.</small></span>
+  </a>
+  <nav class="navlinks" id="navlinks">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="system.html">System</a>
+    <a href="netzwerk.html">Netzwerk</a>
+    <a href="dienste.html">Dienste</a>
+    <a href="storage.html" class="active">Storage</a>
+    <a href="streaming.html">Streaming</a>
+    <a href="logs.html">Logs</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle" type="button">Mehr ▾</button>
+      <div class="dropdown-menu">
+        <a href="projekt.html">Projekt</a>
+        <a href="dokumentation.html">Dokumentation</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="blog.html">Blog</a>
+        <a href="ueber-mich.html">Über mich</a>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-right">
+    <div class="nav-clock"><b id="clockTime">--:--:--</b><span id="clockDate">--.--.----</span></div>
+  </div>
+  <button class="nav-burger" id="navBurger" aria-label="Menü">☰</button>
+</header>
+
+<div class="page-hero">
+  <div class="crumb">STORAGE</div>
+  <h1>Festplatte &amp; Belegung</h1>
+  <p>Eine einzelne WD Blue 1 TB HDD als Systemplatte. Aktuell fast leer — SMART-Überwachung und ein zweites Volume für Backups sind für spätere Phasen geplant.</p>
+</div>
+
+<div class="content">
+
+  <div class="two-col">
+    <div class="card center-flex">
+      <svg width="130" height="130" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#1c1e21" stroke-width="11"/>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#8dff00" stroke-width="11" stroke-dasharray="251.3" stroke-dashoffset="248.8" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+        <text x="50" y="46" text-anchor="middle" font-family="JetBrains Mono" font-size="17" fill="#e7e9ea" font-weight="700">1%</text>
+        <text x="50" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#7a8188">belegt</text>
+      </svg>
+      <div>
+        <div style="font-weight:700; font-family:var(--mono);">WD Blue 1 TB</div>
+        <p class="desc" style="margin-top:6px;">Filesystem: <code>ext4</code><br>Belegt: ~9 GB von 931 GB<br>SMART-Prüfung folgt später.</p>
+      </div>
+    </div>
+    <div class="card">
+      <table>
+        <tr><th>Eigenschaft</th><th>Wert</th></tr>
+        <tr><td>Modell</td><td>WD Blue</td></tr>
+        <tr><td>Kapazität</td><td>1 TB (931 GB nutzbar)</td></tr>
+        <tr><td>Dateisystem</td><td><code>ext4</code></td></tr>
+        <tr><td>Belegt</td><td>~9 GB (1%)</td></tr>
+        <tr><td>SMART-Status</td><td><span class="status-pill status-planned"><span class="sd"></span>geplant</span></td></tr>
+        <tr><td>Backup-Ziel</td><td><span class="status-pill status-planned"><span class="sd"></span>geplant (Phase 7)</span></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="section-title">// Ausblick</div>
+  <p class="desc">Sobald Docker &amp; Nextcloud laufen, wird die Belegung deutlich steigen. Für Backups ist ein separates Ziel (externe Platte oder Cloud) in Phase 7 der Roadmap vorgesehen.</p>
+
+</div>
+
+<footer class="sitefooter">
+  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Kernel 7.0.0-22-generic · Phase 1/8 abgeschlossen</div>
+  <div class="fstatus">
+    <span><span class="fdot on"></span>SSH aktiv</span>
+    <span><span class="fdot"></span>Docker geplant</span>
+    <span><span class="fdot"></span>Backup geplant</span>
+    <span><span class="fdot"></span>Monitoring geplant</span>
+  </div>
+</footer>
+
+<script src="assets/js/sys-homelab.js"></script>
+</body>
+</html>

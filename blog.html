@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — SYS-HOMELAB</title>
+<link rel="stylesheet" href="assets/css/sys-homelab.css">
+</head>
+<body>
+
+<header class="topnav">
+  <a href="index.html" class="brand">
+    <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2L36 11V29L20 38L4 29V11L20 2Z" stroke="#8dff00" stroke-width="2"/>
+      <path d="M14 15c0-2 2-3 5-3s5 1.4 5 3.2c0 4.6-11 2.4-11 8.4 0 2.3 2.3 4.2 6 4.2s6-1.6 6-4" stroke="#8dff00" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span class="brand-text">SYS-HOMELAB<small>LEARN. BUILD. DOCUMENT.</small></span>
+  </a>
+  <nav class="navlinks" id="navlinks">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="system.html">System</a>
+    <a href="netzwerk.html">Netzwerk</a>
+    <a href="dienste.html">Dienste</a>
+    <a href="storage.html">Storage</a>
+    <a href="streaming.html">Streaming</a>
+    <a href="logs.html">Logs</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle active" type="button">Mehr ▾</button>
+      <div class="dropdown-menu">
+        <a href="projekt.html">Projekt</a>
+        <a href="dokumentation.html">Dokumentation</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="ueber-mich.html">Über mich</a>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-right">
+    <div class="nav-clock"><b id="clockTime">--:--:--</b><span id="clockDate">--.--.----</span></div>
+  </div>
+  <button class="nav-burger" id="navBurger" aria-label="Menü">☰</button>
+</header>
+
+<div class="page-hero">
+  <div class="crumb">BLOG</div>
+  <h1>Baufortschritt, ehrlich dokumentiert</h1>
+  <p>Kurze Beiträge zu jedem Meilenstein — auch wenn mal etwas nicht auf Anhieb funktioniert hat.</p>
+</div>
+
+<div class="content">
+  <div class="card">
+    <div class="blog-post">
+      <div class="blog-meta">Phase 1 · SYS-HOMELAB</div>
+      <div class="blog-title">Der erste Meilenstein: Ubuntu Server läuft</div>
+      <p class="desc">Ubuntu Server 26.04 LTS installiert, ein hartnäckiges Netzwerkproblem gelöst, DHCP erfolgreich eingerichtet (192.168.1.102), Internetzugriff hergestellt, System aktualisiert und der neue Kernel 7.0.0-22-generic aktiviert. Der SSH-Dienst ist ebenfalls aktiv — der volle Fernzugriff vom Windows-PC folgt, sobald ein längeres LAN-Kabel da ist. Damit steht das stabile Fundament für alle weiteren Phasen.</p>
+    </div>
+    <div class="empty">⌁ Weitere Artikel folgen mit Phase 2 (SSH-Zugriff &amp; Cockpit)</div>
+  </div>
+</div>
+
+<footer class="sitefooter">
+  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Kernel 7.0.0-22-generic · Phase 1/8 abgeschlossen</div>
+  <div class="fstatus">
+    <span><span class="fdot on"></span>SSH aktiv</span>
+    <span><span class="fdot"></span>Docker geplant</span>
+    <span><span class="fdot"></span>Backup geplant</span>
+    <span><span class="fdot"></span>Monitoring geplant</span>
+  </div>
+</footer>
+
+<script src="assets/js/sys-homelab.js"></script>
+</body>
+</html>

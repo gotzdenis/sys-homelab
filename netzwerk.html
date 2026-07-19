@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netzwerk — SYS-HOMELAB</title>
+<link rel="stylesheet" href="assets/css/sys-homelab.css">
+</head>
+<body>
+
+<header class="topnav">
+  <a href="index.html" class="brand">
+    <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2L36 11V29L20 38L4 29V11L20 2Z" stroke="#8dff00" stroke-width="2"/>
+      <path d="M14 15c0-2 2-3 5-3s5 1.4 5 3.2c0 4.6-11 2.4-11 8.4 0 2.3 2.3 4.2 6 4.2s6-1.6 6-4" stroke="#8dff00" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span class="brand-text">SYS-HOMELAB<small>LEARN. BUILD. DOCUMENT.</small></span>
+  </a>
+  <nav class="navlinks" id="navlinks">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="system.html">System</a>
+    <a href="netzwerk.html" class="active">Netzwerk</a>
+    <a href="dienste.html">Dienste</a>
+    <a href="storage.html">Storage</a>
+    <a href="streaming.html">Streaming</a>
+    <a href="logs.html">Logs</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle" type="button">Mehr ▾</button>
+      <div class="dropdown-menu">
+        <a href="projekt.html">Projekt</a>
+        <a href="dokumentation.html">Dokumentation</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="blog.html">Blog</a>
+        <a href="ueber-mich.html">Über mich</a>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-right">
+    <div class="nav-clock"><b id="clockTime">--:--:--</b><span id="clockDate">--.--.----</span></div>
+  </div>
+  <button class="nav-burger" id="navBurger" aria-label="Menü">☰</button>
+</header>
+
+<div class="page-hero">
+  <div class="crumb">NETZWERK</div>
+  <h1>Topologie &amp; Konfiguration</h1>
+  <p>DHCP wurde erfolgreich eingerichtet, Internetzugang funktioniert, Ping auf 8.8.8.8 war erfolgreich. SSH ist auf dem Server aktiviert — sobald ein längeres LAN-Kabel vorhanden ist, erfolgt der Zugriff komplett vom Windows-PC.</p>
+</div>
+
+<div class="content">
+
+  <div class="section-title">// Konfiguration</div>
+  <div class="grid grid-4">
+    <div class="card"><div class="row-sub">IPv4</div><div style="font-family:var(--mono); font-size:18px; margin-top:8px; color:var(--green);">192.168.1.102</div></div>
+    <div class="card"><div class="row-sub">Gateway</div><div style="font-family:var(--mono); font-size:18px; margin-top:8px;">192.168.1.1</div></div>
+    <div class="card"><div class="row-sub">Netzwerkkarte</div><div style="font-family:var(--mono); font-size:15px; margin-top:8px;">Intel I219-V</div></div>
+    <div class="card"><div class="row-sub">Status</div><div style="margin-top:8px;"><span class="status-pill status-online"><span class="sd"></span>Online</span></div></div>
+  </div>
+
+  <div class="section-title">// Topologie</div>
+  <div class="card">
+    <svg viewBox="0 0 720 220" style="width:100%; max-width:720px; height:auto; display:block; margin:0 auto;">
+      <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#3a3f45"/></marker></defs>
+      <line x1="95" y1="110" x2="205" y2="110" stroke="#2a2d31" stroke-width="2" marker-end="url(#arrow)"/>
+      <line x1="285" y1="110" x2="395" y2="110" stroke="#2a2d31" stroke-width="2" marker-end="url(#arrow)"/>
+      <line x1="475" y1="90" x2="565" y2="55" stroke="#8dff00" stroke-width="1.5" stroke-dasharray="3 3" opacity=".6"/>
+      <line x1="475" y1="110" x2="565" y2="110" stroke="#8dff00" stroke-width="1.5" stroke-dasharray="3 3" opacity=".6"/>
+      <line x1="475" y1="130" x2="565" y2="165" stroke="#8dff00" stroke-width="1.5" stroke-dasharray="3 3" opacity=".6"/>
+      <g><circle cx="50" cy="110" r="34" fill="#111315" stroke="#2a2d31" stroke-width="1.5"/><text x="50" y="105" text-anchor="middle" font-family="JetBrains Mono" font-size="17" fill="#7a8188">☁</text><text x="50" y="155" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#7a8188">Internet</text></g>
+      <g><rect x="210" y="85" width="80" height="50" rx="8" fill="#111315" stroke="#2a2d31" stroke-width="1.5"/><text x="250" y="115" text-anchor="middle" font-family="JetBrains Mono" font-size="15" fill="#7a8188">▭</text><text x="250" y="155" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#7a8188">Router</text><text x="250" y="168" text-anchor="middle" font-family="JetBrains Mono" font-size="8.5" fill="#4d5359">192.168.1.1</text></g>
+      <g><rect x="400" y="85" width="80" height="50" rx="8" fill="#111315" stroke="#2a2d31" stroke-width="1.5"/><text x="440" y="115" text-anchor="middle" font-family="JetBrains Mono" font-size="15" fill="#7a8188">◫</text><text x="440" y="155" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#7a8188">Switch</text></g>
+      <g><rect x="570" y="30" width="120" height="46" rx="8" fill="#0d1a03" stroke="#8dff00" stroke-width="1.5"/><text x="630" y="53" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#8dff00">sys-home-lab</text><text x="630" y="65" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#5c9c00">192.168.1.102</text></g>
+      <g><rect x="570" y="87" width="120" height="46" rx="8" fill="#111315" stroke="#24272b"/><text x="630" y="107" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#7a8188">Windows-PC</text><text x="630" y="119" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#4d5359">192.168.1.100</text></g>
+      <g><rect x="570" y="144" width="120" height="46" rx="8" fill="#111315" stroke="#24272b"/><text x="630" y="164" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#7a8188">Weitere Clients</text><text x="630" y="176" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#4d5359">192.168.1.x</text></g>
+    </svg>
+  </div>
+
+  <div class="section-title">// Geplant</div>
+  <p class="desc">Sobald ein längeres LAN-Kabel vorhanden ist, wird der SSH-Zugriff dauerhaft vom Windows-PC aus eingerichtet. Danach folgt eine feste (statische) IP-Reservierung für den Server über den Router sowie perspektivisch eine eigene Firewall-Konfiguration (UFW).</p>
+
+</div>
+
+<footer class="sitefooter">
+  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Kernel 7.0.0-22-generic · Phase 1/8 abgeschlossen</div>
+  <div class="fstatus">
+    <span><span class="fdot on"></span>SSH aktiv</span>
+    <span><span class="fdot"></span>Docker geplant</span>
+    <span><span class="fdot"></span>Backup geplant</span>
+    <span><span class="fdot"></span>Monitoring geplant</span>
+  </div>
+</footer>
+
+<script src="assets/js/sys-homelab.js"></script>
+</body>
+</html>
