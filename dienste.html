@@ -25,7 +25,7 @@
     <a href="streaming.html">Streaming</a>
     <a href="logs.html">Logs</a>
     <div class="dropdown">
-      <button class="dropdown-toggle" type="button">Mehr ▾</button>
+      <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Mehr ▾</button>
       <div class="dropdown-menu">
         <a href="projekt.html">Projekt</a>
         <a href="dokumentation.html">Dokumentation</a>
@@ -48,12 +48,13 @@
 </div>
 
 <div class="content">
+  <div class="data-note"><strong>DIENSTÜBERSICHT · NICHT LIVE ABGEFRAGT</strong>„Aktiv“ beschreibt den zuletzt dokumentierten Stand. Die geplanten Anwendungen kommen erst nach der gemeinsamen Planung und Einrichtung.</div>
 
   <div class="section-title">// Host-Dienste</div>
   <div class="card">
     <table>
       <tr><th>Dienst</th><th>Port</th><th>Beschreibung</th><th>Status</th></tr>
-      <tr><td>SSH</td><td><code>22</code></td><td>Secure Shell — Fernzugriff</td><td><span class="status-pill status-online"><span class="sd"></span>aktiv</span></td></tr>
+      <tr><td>SSH</td><td><code>22</code></td><td>Secure Shell — Fernzugriff</td><td><span class="status-pill status-online"><span class="sd"></span>zuletzt dokumentiert</span></td></tr>
       <tr><td>Cockpit</td><td><code>9090</code></td><td>Webbasierte Serververwaltung</td><td><span class="status-pill status-planned"><span class="sd"></span>geplant</span></td></tr>
     </table>
   </div>
@@ -69,14 +70,14 @@
     <div class="card"><div class="center-flex" style="justify-content:space-between;"><div class="ico" style="width:34px;height:34px;border-radius:8px;background:var(--panel-2);display:flex;align-items:center;justify-content:center;font-size:16px;">🔀</div><span class="status-pill status-planned"><span class="sd"></span>geplant</span></div><div style="font-weight:600; margin-top:12px;">Nginx Proxy Manager</div><div class="row-sub" style="margin-top:4px;">Reverse Proxy · Port 81</div></div>
     <div class="card"><div class="center-flex" style="justify-content:space-between;"><div class="ico" style="width:34px;height:34px;border-radius:8px;background:var(--panel-2);display:flex;align-items:center;justify-content:center;font-size:16px;">🏠</div><span class="status-pill status-planned"><span class="sd"></span>geplant</span></div><div style="font-weight:600; margin-top:12px;">Homepage Dashboard</div><div class="row-sub" style="margin-top:4px;">Startseite aller Dienste · Port 3001</div></div>
   </div>
-  <p class="hint" style="margin-top:14px;">Docker-Engine selbst ist Teil von Phase 3 der <a href="roadmap.html" class="card-link">Roadmap</a> und noch nicht installiert.</p>
+  <p class="hint" style="margin-top:14px;">Docker-Engine selbst ist Teil von Phase 3 der <a href="roadmap.html" class="card-link">Roadmap</a>; Installation und Auswahl der Dienste sind noch offen.</p>
 
 </div>
 
 <footer class="sitefooter">
-  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Kernel 7.0.0-22-generic · Phase 1/8 abgeschlossen</div>
+  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Phase 2/8 · Zugriff in Arbeit</div>
   <div class="fstatus">
-    <span><span class="fdot on"></span>SSH aktiv</span>
+    <span><span class="fdot on"></span>SSH zuletzt dokumentiert</span>
     <span><span class="fdot"></span>Docker geplant</span>
     <span><span class="fdot"></span>Backup geplant</span>
     <span><span class="fdot"></span>Monitoring geplant</span>

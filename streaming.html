@@ -25,7 +25,7 @@
     <a href="streaming.html" class="active">Streaming</a>
     <a href="logs.html">Logs</a>
     <div class="dropdown">
-      <button class="dropdown-toggle" type="button">Mehr ▾</button>
+      <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Mehr ▾</button>
       <div class="dropdown-menu">
         <a href="projekt.html">Projekt</a>
         <a href="dokumentation.html">Dokumentation</a>
@@ -42,57 +42,46 @@
 </header>
 
 <div class="page-hero">
-  <div class="crumb">STREAMING <span class="status-pill status-planned" style="margin-left:8px;"><span class="sd"></span>in Planung</span></div>
-  <h1>Homelab-Aufbau live begleiten</h1>
-  <p>Idee: den weiteren Aufbau von SYS-HOMELAB (Docker, Monitoring, Automatisierung) live auf Twitch/YouTube unter <strong style="color:var(--text);">/sys_homelab</strong> zu dokumentieren. Diese Seite zeigt den geplanten Ablauf — noch ist nichts live.</p>
+  <div class="crumb">STREAMING <span class="status-pill status-planned" style="margin-left:8px;"><span class="sd"></span>lokales OBS-Setup vorhanden</span></div>
+  <h1>SYS-OBS-UI &amp; Homelab-Aufnahmen</h1>
+  <p>OBS ist auf dem Windows-PC eingerichtet. Szenenwechsel, Mikrofon und eine kurze Testaufnahme wurden bereits ausprobiert. Ein öffentlicher Livestream und eine Verbindung dieser Website zu OBS bestehen noch nicht.</p>
 </div>
 
 <div class="content">
+  <div class="data-note"><strong>LOKALES SETUP · KEIN STREAM-STATUS</strong>Diese statische Website kann OBS nicht direkt auslesen. Zuschauerzahlen, Bitrate, Aufnahmezeit und aktuelle Szene erscheinen erst nach einer späteren, geschützten Anbindung an einen lokalen Dienst.</div>
 
-  <div class="section-title">// Geplanter Stream-Status</div>
+  <div class="section-title">// Tatsächlicher Stand</div>
   <div class="grid grid-4">
-    <div class="card"><div class="row-sub">Stream-Status</div><div style="font-family:var(--mono); font-weight:700; font-size:16px; margin-top:6px; color:var(--muted);">Offline</div></div>
-    <div class="card"><div class="row-sub">Aufnahme</div><div style="font-family:var(--mono); font-weight:700; font-size:16px; margin-top:6px;">00:00:00</div></div>
-    <div class="card"><div class="row-sub">Plattformen</div><div style="font-family:var(--mono); font-weight:700; font-size:16px; margin-top:6px;">Twitch · YouTube</div></div>
-    <div class="card"><div class="row-sub">Handle</div><div style="font-family:var(--mono); font-weight:700; font-size:16px; margin-top:6px; color:var(--green);">/sys_homelab</div></div>
+    <div class="card"><div class="row-sub">OBS-Szenen</div><div style="font-family:var(--mono);font-weight:700;font-size:16px;margin-top:6px;color:var(--green);">eingerichtet</div><p class="hint" style="margin-top:6px;">lokale Szenensammlung</p></div>
+    <div class="card"><div class="row-sub">Testaufnahme</div><div style="font-family:var(--mono);font-weight:700;font-size:16px;margin-top:6px;color:var(--green);">durchgeführt</div><p class="hint" style="margin-top:6px;">Mikrofon und Szenenwechsel geprüft</p></div>
+    <div class="card"><div class="row-sub">Livestream</div><div style="font-family:var(--mono);font-weight:700;font-size:16px;margin-top:6px;color:var(--muted);">noch nicht gestartet</div></div>
+    <div class="card"><div class="row-sub">Kanal / Plattform</div><div style="font-family:var(--mono);font-weight:700;font-size:16px;margin-top:6px;color:var(--muted);">noch zu bestätigen</div><p class="hint" style="margin-top:6px;">YouTube-Kanalnamen vor Verknüpfung prüfen</p></div>
   </div>
 
-  <div class="section-title">// Geplante Szenen</div>
+  <div class="section-title">// Vorhandene Szenen</div>
   <div class="grid grid-3">
-    <div class="card" style="text-align:center; padding:30px 18px;">
-      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#8dff00" stroke-width="1.5" style="margin:0 auto 12px;"><rect x="3" y="6" width="12" height="12" rx="2"/><path d="M15 10l6-3v10l-6-3z"/></svg>
-      <div style="font-weight:700; letter-spacing:.5px;">STARTING SOON</div>
-      <p class="hint" style="margin-top:6px;">Der Stream beginnt in Kürze</p>
-    </div>
-    <div class="card" style="text-align:center; padding:30px 18px;">
-      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#8dff00" stroke-width="1.5" style="margin:0 auto 12px;"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
-      <div style="font-weight:700; letter-spacing:.5px;">BE RIGHT BACK</div>
-      <p class="hint" style="margin-top:6px;">Ich bin gleich zurück</p>
-    </div>
-    <div class="card" style="text-align:center; padding:30px 18px;">
-      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#8dff00" stroke-width="1.5" style="margin:0 auto 12px;"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
-      <div style="font-weight:700; letter-spacing:.5px;">STREAM ENDING</div>
-      <p class="hint" style="margin-top:6px;">Danke fürs Dabeisein!</p>
-    </div>
+    <div class="card"><strong>STARTING SOON</strong><p class="hint" style="margin-top:6px;">Startbildschirm</p></div>
+    <div class="card"><strong>HOMELAB/BUILD</strong><p class="hint" style="margin-top:6px;">Serverarbeit und Dokumentation</p></div>
+    <div class="card"><strong>DASHBOARD</strong><p class="hint" style="margin-top:6px;">SYS-Homelab-Ansicht</p></div>
+    <div class="card"><strong>BRB</strong><p class="hint" style="margin-top:6px;">kurze Pause</p></div>
+    <div class="card"><strong>ENDING</strong><p class="hint" style="margin-top:6px;">Abschluss</p></div>
   </div>
 
-  <div class="section-title">// Geplantes Setup</div>
+  <div class="section-title">// So lässt es sich verwenden</div>
   <div class="card">
     <div class="row-list">
-      <div class="row"><span>Aufnahme-/Streaming-Software</span><span class="row-meta">OBS Studio</span></div>
-      <div class="row"><span>Szenen-Vorlagen</span><span class="row-meta">Starting Soon / BRB / Ending</span></div>
-      <div class="row"><span>Audio</span><span class="row-meta">Mikrofon + Systemsound</span></div>
-      <div class="row"><span>Aufzeichnungsziel</span><span class="row-meta">lokal → später NAS/Storage</span></div>
+      <div class="row"><span>Aufnahme jetzt</span><span class="row-meta">Szenen in OBS manuell wechseln</span></div>
+      <div class="row"><span>Später: echte Homelab-Werte</span><span class="row-meta">nach Erfassung am Server</span></div>
+      <div class="row"><span>Später: OBS-Status / Streamdaten</span><span class="row-meta">geschützte lokale Vermittlung nötig</span></div>
+      <div class="row"><span>Später: Alerts / Chat / Follower</span><span class="row-meta">erst nach Plattformwahl und Freigabe</span></div>
     </div>
   </div>
-  <p class="hint" style="margin-top:14px;">Sobald der erste Stream stattfindet, zieht diese Seite auf echte Werte um (Zuschauer, Bitrate, aktuelle Szene).</p>
-
+  <p class="hint" style="margin-top:14px;">Bis dahin eignet sich die Seite als Projekt- und Ablaufdokumentation. Wenn Streaming dauerhaft kein Ziel wird, kann sie später entfernt werden, ohne das Homelab-Dashboard zu beeinflussen.</p>
 </div>
-
 <footer class="sitefooter">
-  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Kernel 7.0.0-22-generic · Phase 1/8 abgeschlossen</div>
+  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Phase 2/8 · Zugriff in Arbeit</div>
   <div class="fstatus">
-    <span><span class="fdot on"></span>SSH aktiv</span>
+    <span><span class="fdot on"></span>SSH zuletzt dokumentiert</span>
     <span><span class="fdot"></span>Docker geplant</span>
     <span><span class="fdot"></span>Backup geplant</span>
     <span><span class="fdot"></span>Monitoring geplant</span>

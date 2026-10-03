@@ -25,7 +25,7 @@
     <a href="streaming.html">Streaming</a>
     <a href="logs.html">Logs</a>
     <div class="dropdown">
-      <button class="dropdown-toggle" type="button">Mehr ▾</button>
+      <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Mehr ▾</button>
       <div class="dropdown-menu">
         <a href="projekt.html">Projekt</a>
         <a href="dokumentation.html">Dokumentation</a>
@@ -47,9 +47,9 @@
     <p class="lead">Ein privates Homelab, das gleichzeitig als Lernplattform, Portfolio-Projekt und Testumgebung für Linux, Docker, Netzwerke, Automatisierung und IT-Security dient. Aufgebaut und dokumentiert von Grund auf.</p>
     <div class="pills">
       <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/></svg>Ubuntu Server 26.04 LTS</div>
-      <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/></svg>WD Blue 1 TB</div>
+      <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/></svg>Storage-Daten offen</div>
       <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-6-4-9s1.5-6.5 4-9z"/></svg>192.168.1.102</div>
-      <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 8l3 3-3 3M13 14h4"/></svg>SSH aktiv</div>
+      <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 8l3 3-3 3M13 14h4"/></svg>SSH zuletzt dokumentiert</div>
     </div>
     <div class="cta-row">
       <a href="dashboard.html" class="btn">Zum Dashboard →</a>
@@ -78,13 +78,14 @@
 </section>
 
 <div class="content">
+  <div class="data-note"><strong>DOKUMENTATIONSSTAND · KEINE LIVE-METRIKEN</strong>Die Uhr oben zeigt die echte lokale Zeit. Systemwerte und Statuskarten sind statische Angaben, keine direkte Serverabfrage.</div>
 
-  <div class="section-title">// Systemstatus (live)</div>
+  <div class="section-title">// Projektstatus · nicht live abgefragt</div>
   <div class="grid grid-4">
-    <div class="card"><div class="row-sub">CPU</div><div style="font-family:var(--mono); font-size:22px; font-weight:700; margin-top:6px;">gering</div><p class="hint" style="margin-top:6px;">frisch installiert, kaum Last</p></div>
-    <div class="card"><div class="row-sub">Netzwerk</div><div style="font-family:var(--mono); font-size:22px; font-weight:700; margin-top:6px; color:var(--green);">Online</div><p class="hint" style="margin-top:6px;">DHCP · 192.168.1.102</p></div>
-    <div class="card"><div class="row-sub">Dienste</div><div style="font-family:var(--mono); font-size:22px; font-weight:700; margin-top:6px;">1 / 10</div><p class="hint" style="margin-top:6px;">SSH aktiv, Rest geplant</p></div>
-    <div class="card"><div class="row-sub">Projektfortschritt</div><div style="font-family:var(--mono); font-size:22px; font-weight:700; margin-top:6px; color:var(--green);">30%</div><p class="hint" style="margin-top:6px;">Phase 1 von 8 + SSH</p></div>
+    <div class="card"><div class="row-sub">CPU</div><div style="font-family:var(--mono); font-size:18px; font-weight:700; margin-top:6px;">Nicht verbunden</div><p class="hint" style="margin-top:6px;">keine Live-Messung</p></div>
+    <div class="card"><div class="row-sub">Netzwerk</div><div style="font-family:var(--mono); font-size:18px; font-weight:700; margin-top:6px; color:var(--green);">Letzter Stand: online</div><p class="hint" style="margin-top:6px;">DHCP · 192.168.1.102 · nicht live geprüft</p></div>
+    <div class="card"><div class="row-sub">Dienste</div><div style="font-family:var(--mono); font-size:18px; font-weight:700; margin-top:6px;">Status dokumentiert</div><p class="hint" style="margin-top:6px;">SSH laut letzter Doku; weitere Dienste geplant</p></div>
+    <div class="card"><div class="row-sub">Projektfortschritt</div><div style="font-family:var(--mono); font-size:18px; font-weight:700; margin-top:6px; color:var(--green);">Phase 2/8</div><p class="hint" style="margin-top:6px;">Zugriff in Arbeit · weitere Phasen geplant</p></div>
   </div>
   <p style="margin-top:12px;"><a href="dashboard.html" class="card-link">→ Vollständiges Dashboard ansehen</a></p>
 
@@ -103,19 +104,19 @@
   </div>
 
   <div class="section-title">// SYS-Ökosystem</div>
-  <div class="grid grid-3">
+  <div class="grid grid-2">
     <div class="card eco-card"><div class="eco-tag">AKTIV</div><div class="eco-name accent">SYS-HOMELAB</div><p class="desc" style="margin-top:8px;">Diese Infrastruktur — Linux, Docker, Netzwerke, Monitoring, IT-Security.</p><div class="eco-url">→ diese Seite</div></div>
-    <div class="card eco-card"><div class="eco-tag">PORTFOLIO</div><div class="eco-name">SYS-Portfolio</div><p class="desc" style="margin-top:8px;">Öffentlicher Auftritt & Lebenslauf als angehender Fachinformatiker Systemintegration.</p><div class="eco-url">sys-portfolio.de</div></div>
-    <div class="card eco-card"><div class="eco-tag">SIDE PROJECT</div><div class="eco-name">SYS-Garden</div><p class="desc" style="margin-top:8px;">Begleitendes Automatisierungs-Projekt im SYS-Ökosystem.</p><div class="eco-url">sys-garden.de</div></div>
+    <div class="card eco-card"><div class="eco-tag">PORTFOLIO</div><div class="eco-name">SYS-Portfolio</div><p class="desc" style="margin-top:8px;">Öffentlicher Auftritt & Lernjournal als angehender Fachinformatiker Systemintegration.</p><a class="eco-url" href="https://gotzdenis.github.io/meine-website/" target="_blank" rel="noopener">Portfolio öffnen ↗</a></div>
+    
   </div>
   <p style="margin-top:14px;"><a href="projekt.html" class="card-link">→ mehr zum Ökosystem</a></p>
 
 </div>
 
 <footer class="sitefooter">
-  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Kernel 7.0.0-22-generic · Phase 1/8 abgeschlossen</div>
+  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Phase 2/8 · Zugriff in Arbeit</div>
   <div class="fstatus">
-    <span><span class="fdot on"></span>SSH aktiv</span>
+    <span><span class="fdot on"></span>SSH zuletzt dokumentiert</span>
     <span><span class="fdot"></span>Docker geplant</span>
     <span><span class="fdot"></span>Backup geplant</span>
     <span><span class="fdot"></span>Monitoring geplant</span>

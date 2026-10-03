@@ -25,7 +25,7 @@
     <a href="streaming.html">Streaming</a>
     <a href="logs.html" class="active">Logs</a>
     <div class="dropdown">
-      <button class="dropdown-toggle" type="button">Mehr ▾</button>
+      <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Mehr ▾</button>
       <div class="dropdown-menu">
         <a href="projekt.html">Projekt</a>
         <a href="dokumentation.html">Dokumentation</a>
@@ -44,28 +44,29 @@
 <div class="page-hero">
   <div class="crumb">LOGS</div>
   <h1>Ereignisprotokoll</h1>
-  <p>Bisher noch kein zentrales Log-System (folgt mit Grafana/Prometheus in Phase 6) — hier die real dokumentierten Ereignisse aus dem Setup.</p>
+  <p>Bisher gibt es kein zentrales Log-System. Die folgenden Zeilen sind Beispiele und keine aktuellen oder live erfassten Ereignisse.</p>
 </div>
 
 <div class="content">
+  <div class="data-note"><strong>BEISPIELPROTOKOLL · KEINE ECHTEN ZEITSTEMPEL</strong>Die Einträge illustrieren die spätere Log-Ansicht. Echte Serverereignisse werden erst nach Einrichtung eines Log-Systems angezeigt.</div>
   <div class="card">
     <table>
       <tr><th>Zeit</th><th>Level</th><th>Ereignis</th></tr>
-      <tr><td class="hint">heute, 18:42</td><td><span class="status-pill status-online"><span class="sd"></span>INFO</span></td><td>SSH-Dienst aktiviert und bereit für Fernzugriff</td></tr>
-      <tr><td class="hint">heute, 18:30</td><td><span class="status-pill status-online"><span class="sd"></span>INFO</span></td><td>Kernel aktualisiert auf 7.0.0-22-generic</td></tr>
-      <tr><td class="hint">heute, 18:15</td><td><span class="status-pill status-online"><span class="sd"></span>INFO</span></td><td><code>sudo apt update &amp;&amp; sudo apt upgrade</code> erfolgreich abgeschlossen</td></tr>
-      <tr><td class="hint">heute, 17:50</td><td><span class="status-pill status-online"><span class="sd"></span>INFO</span></td><td>Ping auf 8.8.8.8 erfolgreich — Internetzugang bestätigt</td></tr>
-      <tr><td class="hint">heute, 17:45</td><td><span class="status-pill status-online"><span class="sd"></span>INFO</span></td><td>DHCP-Lease erhalten: 192.168.1.102 (Gateway 192.168.1.1)</td></tr>
-      <tr><td class="hint">heute, 17:20</td><td><span class="status-pill status-online"><span class="sd"></span>INFO</span></td><td>Ubuntu Server 26.04 LTS erfolgreich installiert, Benutzer „denis" angelegt</td></tr>
+      <tr><td class="hint">DEMO</td><td><span class="status-pill status-online"><span class="sd"></span>INFO</span></td><td>SSH-Dienst aktiviert und bereit für Fernzugriff</td></tr>
+      <tr><td class="hint">DEMO</td><td><span class="status-pill status-online"><span class="sd"></span>INFO</span></td><td>Kernel aktualisiert auf 7.0.0-22-generic</td></tr>
+      <tr><td class="hint">DEMO</td><td><span class="status-pill status-online"><span class="sd"></span>INFO</span></td><td><code>sudo apt update &amp;&amp; sudo apt upgrade</code> erfolgreich abgeschlossen</td></tr>
+      <tr><td class="hint">DEMO</td><td><span class="status-pill status-online"><span class="sd"></span>INFO</span></td><td>Ping auf 8.8.8.8 erfolgreich — Internetzugang bestätigt</td></tr>
+      <tr><td class="hint">DEMO</td><td><span class="status-pill status-online"><span class="sd"></span>INFO</span></td><td>DHCP-Lease erhalten: 192.168.1.102 (Gateway 192.168.1.1)</td></tr>
+      <tr><td class="hint">DEMO</td><td><span class="status-pill status-online"><span class="sd"></span>INFO</span></td><td>Ubuntu Server 26.04 LTS erfolgreich installiert, Benutzer „denis" angelegt</td></tr>
     </table>
   </div>
   <p class="empty">Keine weiteren Einträge · zentrales Logging folgt mit Monitoring-Stack</p>
 </div>
 
 <footer class="sitefooter">
-  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Kernel 7.0.0-22-generic · Phase 1/8 abgeschlossen</div>
+  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Phase 2/8 · Zugriff in Arbeit</div>
   <div class="fstatus">
-    <span><span class="fdot on"></span>SSH aktiv</span>
+    <span><span class="fdot on"></span>SSH zuletzt dokumentiert</span>
     <span><span class="fdot"></span>Docker geplant</span>
     <span><span class="fdot"></span>Backup geplant</span>
     <span><span class="fdot"></span>Monitoring geplant</span>

@@ -25,7 +25,7 @@
     <a href="streaming.html">Streaming</a>
     <a href="logs.html">Logs</a>
     <div class="dropdown">
-      <button class="dropdown-toggle" type="button">Mehr ▾</button>
+      <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Mehr ▾</button>
       <div class="dropdown-menu">
         <a href="projekt.html">Projekt</a>
         <a href="dokumentation.html">Dokumentation</a>
@@ -44,46 +44,29 @@
 <div class="page-hero">
   <div class="crumb">STORAGE</div>
   <h1>Festplatte &amp; Belegung</h1>
-  <p>Eine einzelne WD Blue 1 TB HDD als Systemplatte. Aktuell fast leer — SMART-Überwachung und ein zweites Volume für Backups sind für spätere Phasen geplant.</p>
+  <p>Die Originaldaten zu Festplatten, Dateisystem und Belegung werden beim nächsten Serverzugriff erhoben. Bis dahin zeigt diese Seite bewusst keine Laufwerkswerte.</p>
 </div>
 
 <div class="content">
-
-  <div class="two-col">
-    <div class="card center-flex">
-      <svg width="130" height="130" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="40" fill="none" stroke="#1c1e21" stroke-width="11"/>
-        <circle cx="50" cy="50" r="40" fill="none" stroke="#8dff00" stroke-width="11" stroke-dasharray="251.3" stroke-dashoffset="248.8" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-        <text x="50" y="46" text-anchor="middle" font-family="JetBrains Mono" font-size="17" fill="#e7e9ea" font-weight="700">1%</text>
-        <text x="50" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#7a8188">belegt</text>
-      </svg>
-      <div>
-        <div style="font-weight:700; font-family:var(--mono);">WD Blue 1 TB</div>
-        <p class="desc" style="margin-top:6px;">Filesystem: <code>ext4</code><br>Belegt: ~9 GB von 931 GB<br>SMART-Prüfung folgt später.</p>
-      </div>
-    </div>
-    <div class="card">
-      <table>
-        <tr><th>Eigenschaft</th><th>Wert</th></tr>
-        <tr><td>Modell</td><td>WD Blue</td></tr>
-        <tr><td>Kapazität</td><td>1 TB (931 GB nutzbar)</td></tr>
-        <tr><td>Dateisystem</td><td><code>ext4</code></td></tr>
-        <tr><td>Belegt</td><td>~9 GB (1%)</td></tr>
-        <tr><td>SMART-Status</td><td><span class="status-pill status-planned"><span class="sd"></span>geplant</span></td></tr>
-        <tr><td>Backup-Ziel</td><td><span class="status-pill status-planned"><span class="sd"></span>geplant (Phase 7)</span></td></tr>
-      </table>
+  <div class="data-note"><strong>ORIGINALDATEN AUSSTEHEND · KEINE LIVE-WERTE</strong>Festplattenmodell, Dateisystem, Belegung und Zustand werden nach dem nächsten Serverzugriff direkt am Ubuntu-Server erfasst. Bisherige Beispielzahlen wurden entfernt.</div>
+  <div class="card">
+    <div class="card-head"><h3>Zu erfassende Storage-Daten</h3><span class="status-pill status-planned"><span class="sd"></span>offen</span></div>
+    <div class="row-list">
+      <div class="row"><span>Festplattenmodell &amp; Serienkennung</span><span class="row-meta">wird erfasst</span></div>
+      <div class="row"><span>Kapazität &amp; Partitionen</span><span class="row-meta">wird erfasst</span></div>
+      <div class="row"><span>Dateisystem &amp; Einhängepunkte</span><span class="row-meta">wird erfasst</span></div>
+      <div class="row"><span>Belegt / frei</span><span class="row-meta">wird erfasst</span></div>
+      <div class="row"><span>SMART-Zustand &amp; Temperatur</span><span class="row-meta">wird geprüft</span></div>
+      <div class="row"><span>Backup-Ziel</span><span class="row-meta">später geplant</span></div>
     </div>
   </div>
-
-  <div class="section-title">// Ausblick</div>
-  <p class="desc">Sobald Docker &amp; Nextcloud laufen, wird die Belegung deutlich steigen. Für Backups ist ein separates Ziel (externe Platte oder Cloud) in Phase 7 der Roadmap vorgesehen.</p>
-
+  <div class="section-title">// Ablauf</div>
+  <p class="desc">Beim nächsten passenden Homelab-Termin sammeln wir die echten Laufwerksdaten und tragen sie mit Datum ein. SMART-Überwachung und Backups kommen erst nach Auswahl und Einrichtung der passenden Dienste.</p>
 </div>
-
 <footer class="sitefooter">
-  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Kernel 7.0.0-22-generic · Phase 1/8 abgeschlossen</div>
+  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Phase 2/8 · Zugriff in Arbeit</div>
   <div class="fstatus">
-    <span><span class="fdot on"></span>SSH aktiv</span>
+    <span><span class="fdot on"></span>SSH zuletzt dokumentiert</span>
     <span><span class="fdot"></span>Docker geplant</span>
     <span><span class="fdot"></span>Backup geplant</span>
     <span><span class="fdot"></span>Monitoring geplant</span>

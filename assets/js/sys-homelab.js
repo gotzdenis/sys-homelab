@@ -18,10 +18,11 @@
     btn.addEventListener('click', function(e){
       e.stopPropagation();
       btn.parentElement.classList.toggle('open');
+      btn.setAttribute('aria-expanded', btn.parentElement.classList.contains('open') ? 'true' : 'false');
     });
   });
   document.addEventListener('click', function(){
-    document.querySelectorAll('.dropdown.open').forEach(function(d){ d.classList.remove('open'); });
+    document.querySelectorAll('.dropdown.open').forEach(function(d){ d.classList.remove('open'); var btn=d.querySelector('.dropdown-toggle'); if(btn) btn.setAttribute('aria-expanded','false'); });
   });
 })();
 

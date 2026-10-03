@@ -25,7 +25,7 @@
     <a href="streaming.html">Streaming</a>
     <a href="logs.html">Logs</a>
     <div class="dropdown">
-      <button class="dropdown-toggle" type="button">Mehr ▾</button>
+      <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Mehr ▾</button>
       <div class="dropdown-menu">
         <a href="projekt.html">Projekt</a>
         <a href="dokumentation.html">Dokumentation</a>
@@ -44,17 +44,18 @@
 <div class="page-hero">
   <div class="crumb">NETZWERK</div>
   <h1>Topologie &amp; Konfiguration</h1>
-  <p>DHCP wurde erfolgreich eingerichtet, Internetzugang funktioniert, Ping auf 8.8.8.8 war erfolgreich. SSH ist auf dem Server aktiviert — sobald ein längeres LAN-Kabel vorhanden ist, erfolgt der Zugriff komplett vom Windows-PC.</p>
+  <p>Der Ubuntu-Server ist jetzt per LAN angebunden. Der Windows-Hauptrechner nutzt einen USB-WLAN-Adapter. Die darunter gezeigten IP-Adressen sind zuletzt dokumentierte Werte und werden nicht live abgefragt.</p>
 </div>
 
 <div class="content">
+  <div class="data-note"><strong>LETZTER DOKUMENTATIONSSTAND · NICHT LIVE</strong>Die Topologie bildet den gemeldeten Anschlussaufbau ab. IP-Adressen und Online-Status bitte beim nächsten Netzwerktest bestätigen.</div>
 
   <div class="section-title">// Konfiguration</div>
   <div class="grid grid-4">
     <div class="card"><div class="row-sub">IPv4</div><div style="font-family:var(--mono); font-size:18px; margin-top:8px; color:var(--green);">192.168.1.102</div></div>
     <div class="card"><div class="row-sub">Gateway</div><div style="font-family:var(--mono); font-size:18px; margin-top:8px;">192.168.1.1</div></div>
     <div class="card"><div class="row-sub">Netzwerkkarte</div><div style="font-family:var(--mono); font-size:15px; margin-top:8px;">Intel I219-V</div></div>
-    <div class="card"><div class="row-sub">Status</div><div style="margin-top:8px;"><span class="status-pill status-online"><span class="sd"></span>Online</span></div></div>
+    <div class="card"><div class="row-sub">Status</div><div style="margin-top:8px;"><span class="status-pill status-online"><span class="sd"></span>zuletzt dokumentiert</span></div></div>
   </div>
 
   <div class="section-title">// Topologie</div>
@@ -69,21 +70,21 @@
       <g><circle cx="50" cy="110" r="34" fill="#111315" stroke="#2a2d31" stroke-width="1.5"/><text x="50" y="105" text-anchor="middle" font-family="JetBrains Mono" font-size="17" fill="#7a8188">☁</text><text x="50" y="155" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#7a8188">Internet</text></g>
       <g><rect x="210" y="85" width="80" height="50" rx="8" fill="#111315" stroke="#2a2d31" stroke-width="1.5"/><text x="250" y="115" text-anchor="middle" font-family="JetBrains Mono" font-size="15" fill="#7a8188">▭</text><text x="250" y="155" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#7a8188">Router</text><text x="250" y="168" text-anchor="middle" font-family="JetBrains Mono" font-size="8.5" fill="#4d5359">192.168.1.1</text></g>
       <g><rect x="400" y="85" width="80" height="50" rx="8" fill="#111315" stroke="#2a2d31" stroke-width="1.5"/><text x="440" y="115" text-anchor="middle" font-family="JetBrains Mono" font-size="15" fill="#7a8188">◫</text><text x="440" y="155" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#7a8188">Switch</text></g>
-      <g><rect x="570" y="30" width="120" height="46" rx="8" fill="#0d1a03" stroke="#8dff00" stroke-width="1.5"/><text x="630" y="53" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#8dff00">sys-home-lab</text><text x="630" y="65" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#5c9c00">192.168.1.102</text></g>
-      <g><rect x="570" y="87" width="120" height="46" rx="8" fill="#111315" stroke="#24272b"/><text x="630" y="107" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#7a8188">Windows-PC</text><text x="630" y="119" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#4d5359">192.168.1.100</text></g>
+      <g><rect x="570" y="30" width="120" height="46" rx="8" fill="#0d1a03" stroke="#8dff00" stroke-width="1.5"/><text x="630" y="53" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#8dff00">SYS-HOMELAB · LAN</text><text x="630" y="65" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#5c9c00">192.168.1.102</text></g>
+      <g><rect x="570" y="87" width="120" height="46" rx="8" fill="#111315" stroke="#24272b"/><text x="630" y="107" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#7a8188">Windows-PC · WLAN</text><text x="630" y="119" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#4d5359">USB-Adapter</text></g>
       <g><rect x="570" y="144" width="120" height="46" rx="8" fill="#111315" stroke="#24272b"/><text x="630" y="164" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#7a8188">Weitere Clients</text><text x="630" y="176" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#4d5359">192.168.1.x</text></g>
     </svg>
   </div>
 
-  <div class="section-title">// Geplant</div>
-  <p class="desc">Sobald ein längeres LAN-Kabel vorhanden ist, wird der SSH-Zugriff dauerhaft vom Windows-PC aus eingerichtet. Danach folgt eine feste (statische) IP-Reservierung für den Server über den Router sowie perspektivisch eine eigene Firewall-Konfiguration (UFW).</p>
+  <div class="section-title">// Aktueller Aufbau &amp; nächste Schritte</div>
+  <p class="desc">Der Server ist kabelgebunden; der Windows-PC geht per USB-WLAN-Adapter ins Netzwerk. Als nächste Netzwerkschritte bleiben die Prüfung der aktuellen DHCP-Adressen, eine DHCP-Reservierung für den Server und später die Firewall-Konfiguration (UFW).</p>
 
 </div>
 
 <footer class="sitefooter">
-  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Kernel 7.0.0-22-generic · Phase 1/8 abgeschlossen</div>
+  <div>SYS-HOMELAB · Ubuntu Server 26.04 LTS · Phase 2/8 · Zugriff in Arbeit</div>
   <div class="fstatus">
-    <span><span class="fdot on"></span>SSH aktiv</span>
+    <span><span class="fdot on"></span>SSH zuletzt dokumentiert</span>
     <span><span class="fdot"></span>Docker geplant</span>
     <span><span class="fdot"></span>Backup geplant</span>
     <span><span class="fdot"></span>Monitoring geplant</span>
