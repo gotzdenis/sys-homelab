@@ -98,3 +98,47 @@
   tick();
   setInterval(tick, 30000);
 })();
+
+/* ---------------- ROTATING HOMELAB WISDOM (dashboard.html) ---------------- */
+(function(){
+  var quoteEl = document.getElementById('wisdomText');
+  var sourceEl = document.getElementById('wisdomSource');
+  var nextButton = document.getElementById('wisdomNext');
+  if(!quoteEl || !sourceEl) return;
+
+  var quotes = [
+    'Ein stabiles System entsteht durch kleine, überprüfbare Schritte.',
+    'Was du dokumentierst, musst du beim nächsten Mal nicht neu erraten.',
+    'Automatisierung beginnt mit einem Ablauf, den du verstanden hast.',
+    'Sicherheit wächst aus vielen guten Entscheidungen.',
+    'Fehler zeigen, wo dein System noch eine Frage offenlässt.',
+    'Ein Backup beruhigt erst, wenn die Wiederherstellung funktioniert.',
+    'Messen statt raten — besonders bei Infrastruktur.',
+    'Gute Technik darf komplex sein; ihre Bedienung sollte klar bleiben.',
+    'Kleine Änderungen lassen sich leichter nachvollziehen.',
+    'Ein Homelab wächst mit dem Wissen, nicht nur mit der Hardware.',
+    'Ein sauberer Netzwerkplan spart Zeit, wenn es darauf ankommt.',
+    'Erst verstehen, dann automatisieren.'
+  ];
+  var storageKey = 'sysHomelabLastWisdom';
+  var storedIndex = null;
+  try { storedIndex = window.localStorage.getItem(storageKey); } catch(e) {}
+  var previous = storedIndex === null ? -1 : Number(storedIndex);
+  if(!Number.isInteger(previous) || previous < 0 || previous >= quotes.length) previous = -1;
+
+  function showNext(){
+    var next;
+    if(previous < 0){
+      next = Math.floor(Math.random() * quotes.length);
+    } else {
+      next = (previous + 1 + Math.floor(Math.random() * (quotes.length - 1))) % quotes.length;
+    }
+    previous = next;
+    quoteEl.textContent = '„' + quotes[next] + '”';
+    sourceEl.textContent = '— SYS-HOMELAB';
+    try { window.localStorage.setItem(storageKey, String(next)); } catch(e) {}
+  }
+
+  showNext();
+  if(nextButton) nextButton.addEventListener('click', showNext);
+})();
