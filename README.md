@@ -30,7 +30,7 @@ Die Uhr zeigt die lokale Browserzeit. Servermetriken, Speicherwerte, Aktivitäte
 
 ## Status
 
-Projektphase 2/8 (Zugriff) ist in Arbeit. Der Ubuntu-Server ist nach aktuellem Stand per LAN angeschlossen; der Windows-Hauptrechner nutzt einen USB-WLAN-Adapter. Netzwerkadressen, Systemversionen und Hardwarewerte werden beim nächsten Servercheck verifiziert. Containerdienste, Monitoring und Backups folgen erst nach Planung und Einrichtung.
+Projektphase 2/8 (Zugriff) ist in Arbeit. Der Ubuntu-Server ist per LAN angeschlossen; der Windows-Hauptrechner nutzt einen USB-WLAN-Adapter. Konkrete Heimnetz-Adressen werden nicht in der öffentlichen Dokumentation veröffentlicht. Systemversionen und Hardwarewerte werden beim nächsten Servercheck verifiziert. Containerdienste, Monitoring und Backups folgen erst nach Planung und Einrichtung.
 
 SYS-Garden ist vorerst pausiert und wird auf den aktiven Projektseiten nicht geführt; vorhandene Dateien bleiben unangetastet.
 
